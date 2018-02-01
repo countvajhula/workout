@@ -4,6 +4,7 @@ import os
 import time
 
 from datetime import datetime
+from random import choice
 
 
 WORKOUT = {
@@ -11,15 +12,17 @@ WORKOUT = {
     'PUSH-UPS': 2,
     'SQUATS': 3,
     'PLANKS': 4,
-    'SIDE PLANKS': 5,
+    'LEFT SIDE PLANKS': 5,
     'CRUNCHES': 6,
     'CHAIR DIPS': 7,
     'BICYCLES': 8,
     'LUNGES': 9,
     'FIRE HYDRANTS': 10,
+    'RIGHT SIDE PLANKS': 11,
+    'WALL SITS': 12,
 }
 
-WORKOUT_DURATION = 7 * 60  # 7 minutes
+WORKOUT_DURATION = 15 * 60  # 7 minutes
 SET_DURATION = 30  # duration of each set in seconds
 
 
@@ -39,7 +42,18 @@ def end_workout():
 def do_workout(workout, duration):
     os.system("say 'Next: {workout}. 3... 2... 1... GO! {workout}'"
               .format(workout=workout))
-    time.sleep(duration - 3)
+    time.sleep(duration/2.0)
+    call_out = choice((False, True))
+    if call_out:
+        whom = choice(('Sid', 'Ariana'))
+        workout_singular = workout.rstrip('Ss')
+        taunt1 = ("say 'Come on {whom}! You call that a {workout_singular}?'"
+                  .format(whom=whom, workout_singular=workout_singular))
+        taunt2 = ("say 'My grandma does better {workout} than you two!'"
+                  .format(workout=workout))
+        taunt = choice((taunt1, taunt2))
+        os.system(taunt)
+    time.sleep(duration/2.0 - 3)
     os.system("say '3... 2... 1...'")
     time.sleep(1)
     return datetime.now()
