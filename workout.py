@@ -22,7 +22,7 @@ WORKOUT = {
     'WALL SITS': 12,
 }
 
-WORKOUT_DURATION = 15 * 60  # 7 minutes
+WORKOUT_DURATION = 7 * 60  # 7 minutes
 SET_DURATION = 30  # duration of each set in seconds
 
 
@@ -64,11 +64,11 @@ if __name__ == '__main__':
 
     begin_workout()
 
-    workout = WORKOUT.iterkeys()
+    workout = iter(WORKOUT.keys())
     workout_time = 0
 
-    print "workout time = {min}:{sec}".format(min=workout_time/60,
-                                              sec=workout_time%60)
+    print("workout time = {min}:{sec}".format(min=workout_time/60,
+                                              sec=workout_time%60))
     n_sets = 1
     while (workout_time <= WORKOUT_DURATION):
 
@@ -76,15 +76,15 @@ if __name__ == '__main__':
             rest(10)
 
         try:
-            current_time = do_workout(workout.next().lower(), SET_DURATION)
+            current_time = do_workout(next(workout).lower(), SET_DURATION)
         except StopIteration:
             workout = WORKOUT.iterkeys()
-            current_time = do_workout(workout.next().lower(), SET_DURATION)
+            current_time = do_workout(next(workout).lower(), SET_DURATION)
 
         workout_time = (current_time - start_time).total_seconds()
 
         n_sets += 1
 
-    print "workout time = {min}:{sec}".format(min=workout_time/60,
-                                              sec=workout_time%60)
+    print("workout time = {min}:{sec}".format(min=workout_time/60,
+                                              sec=workout_time%60))
     end_workout()
