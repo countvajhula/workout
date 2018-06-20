@@ -40,7 +40,10 @@ def end_workout():
 
 
 def do_workout(workout, duration):
-    os.system("say 'Next: {workout}. 3... 2... 1... GO! {workout}'"
+    os.system("say 'Next: {workout}.'"
+              .format(workout=workout))
+    time.sleep(2)
+    os.system("say '3... 2... 1... GO! {workout}'"
               .format(workout=workout))
     time.sleep(duration/2.0)
     call_out = choice((False, True))
@@ -53,7 +56,8 @@ def do_workout(workout, duration):
                   .format(workout=workout))
         taunt = choice((taunt1, taunt2))
         os.system(taunt)
-    time.sleep(duration/2.0 - 3)
+    interval = max(0, duration/2.0 - 3)
+    time.sleep(interval)
     os.system("say '3... 2... 1...'")
     time.sleep(1)
     return datetime.now()
@@ -64,7 +68,7 @@ if __name__ == '__main__':
 
     begin_workout()
 
-    workout = iter(WORKOUT.keys())
+    workout = iter(['WARM UP'] + list(WORKOUT.keys()))
     workout_time = 0
 
     print("workout time = {min}:{sec}".format(min=workout_time/60,
@@ -78,7 +82,7 @@ if __name__ == '__main__':
         try:
             current_time = do_workout(next(workout).lower(), SET_DURATION)
         except StopIteration:
-            workout = WORKOUT.iterkeys()
+            workout = iter(WORKOUT.keys())
             current_time = do_workout(next(workout).lower(), SET_DURATION)
 
         workout_time = (current_time - start_time).total_seconds()
