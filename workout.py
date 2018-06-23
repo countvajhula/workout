@@ -17,48 +17,55 @@ WORKOUT = {
     'CHAIR DIPS': 7,
     'BICYCLES': 8,
     'LUNGES': 9,
-    'FIRE HYDRANTS': 10,
+    'LEFT FIRE HYDRANTS': 10,
     'RIGHT SIDE PLANKS': 11,
     'WALL SITS': 12,
+    'RIGHT FIRE HYDRANTS': 13,
+    'LEFT LEG RAISES': 14,
+    'RIGHT LEG RAISES': 15,
 }
+# core, glutes, quads, calves, cardio, upper body, yoga, stretches, physio
+# EITHER: length function of itinerary OR set duration derived from itinerary
+# or "standard" vs "timed" workout, where standard has default config of duration, reps etc.
 
 WORKOUT_DURATION = 7 * 60  # 7 minutes
 SET_DURATION = 30  # duration of each set in seconds
 
+def say(text):
+    os.system("say -v Alex {}".format(text))
+
 
 def rest(duration):
-    os.system("say 'Rest!'")
+    say('Rest!')
     time.sleep(duration)
 
 
 def begin_workout():
-    os.system("say 'Beginning {} minute workout.'".format(WORKOUT_DURATION/60))
+    say('Beginning {} minute workout.'.format(WORKOUT_DURATION/60))
 
 
 def end_workout():
-    os.system("say 'Workout complete! Congratulations!'")
+    say('Workout complete! Congratulations!')
 
 
 def do_workout(workout, duration):
-    os.system("say 'Next: {workout}.'"
-              .format(workout=workout))
+    say('Next: {workout}.'.format(workout=workout))
     time.sleep(2)
-    os.system("say '3... 2... 1... GO! {workout}'"
-              .format(workout=workout))
+    say('3... 2... 1... GO! {workout}'.format(workout=workout))
     time.sleep(duration/2.0)
     call_out = choice((False, True))
     if call_out:
         whom = choice(('Sid', 'Ariana'))
         workout_singular = workout.rstrip('Ss')
-        taunt1 = ("say 'Come on {whom}! You call that a {workout_singular}?'"
+        taunt1 = ('Come on {whom}! You call that a {workout_singular}?'
                   .format(whom=whom, workout_singular=workout_singular))
-        taunt2 = ("say 'My grandma does better {workout} than you two!'"
+        taunt2 = ('My grandma does better {workout} than you two!'
                   .format(workout=workout))
         taunt = choice((taunt1, taunt2))
-        os.system(taunt)
+        say(taunt)
     interval = max(0, duration/2.0 - 3)
     time.sleep(interval)
-    os.system("say '3... 2... 1...'")
+    say('3... 2... 1...')
     time.sleep(1)
     return datetime.now()
 
