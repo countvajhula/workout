@@ -2,34 +2,21 @@
 
 import os
 import time
-
 from datetime import datetime
 from random import choice
 
+from routines import (
+    FULL,
+    GENERAL,
+    ABS,
+    GLUTES,
+    CORE,
+    PHYSIO,
+    WORKOUT_NAMES,
+)
 
-WORKOUT = {
-    'JUMPING JACKS': 1,
-    'PUSH-UPS': 2,
-    'SQUATS': 3,
-    'PLANKS': 4,
-    'LEFT SIDE PLANKS': 5,
-    'CRUNCHES': 6,
-    'CHAIR DIPS': 7,
-    'BICYCLES': 8,
-    'LUNGES': 9,
-    'LEFT FIRE HYDRANTS': 10,
-    'RIGHT SIDE PLANKS': 11,
-    'WALL SITS': 12,
-    'RIGHT FIRE HYDRANTS': 13,
-    'LEFT LEG RAISES': 14,
-    'RIGHT LEG RAISES': 15,
-}
-# core, glutes, quads, calves, cardio, upper body, yoga, stretches, physio
-# EITHER: length function of itinerary OR set duration derived from itinerary
-# or "standard" vs "timed" workout, where standard has default config of duration, reps etc.
-
-WORKOUT_DURATION = 7 * 60  # 7 minutes
 SET_DURATION = 30  # duration of each set in seconds
+
 
 def say(text):
     os.system("say -v Alex {}".format(text))
@@ -40,8 +27,23 @@ def rest(duration):
     time.sleep(duration)
 
 
-def begin_workout():
-    say('Beginning {} minute workout.'.format(WORKOUT_DURATION/60))
+def begin_workout(routine, total_duration=None):
+    """
+    Either total workout duration is a function of the selected routine
+    with a default set duration ("standard" workout), or set duration
+    is derived from the specified total duration ("timed" workout).
+
+    TODO: handle rest, exercise, and warmup uniformly.
+    TODO: add notion of "reps."
+    """
+    if total_duration:
+        set_duration = float(total_duration) / len(routine)
+    else:
+        set_duration = SET_DURATION
+        total_duration = len(routine) * set_duration
+
+    say('Beginning {} minute workout.'.format(total_duration/60))
+    return (set_duration, total_duration)
 
 
 def end_workout():
@@ -53,7 +55,7 @@ def do_workout(workout, duration):
     time.sleep(2)
     say('3... 2... 1... GO! {workout}'.format(workout=workout))
     time.sleep(duration/2.0)
-    call_out = choice((False, True))
+    call_out = choice((False, False, True))
     if call_out:
         whom = choice(('Sid', 'Ariana'))
         workout_singular = workout.rstrip('Ss')
@@ -73,24 +75,27 @@ def do_workout(workout, duration):
 if __name__ == '__main__':
     start_time = datetime.now()
 
-    begin_workout()
+    routine = GENERAL
+    routine = [WORKOUT_NAMES[exercise] for exercise in routine]
+    set_duration, total_duration = begin_workout(routine, 600)
+    print(set_duration)
 
-    workout = iter(['WARM UP'] + list(WORKOUT.keys()))
+    workout = iter(['WARM UP'] + list(routine))
     workout_time = 0
 
     print("workout time = {min}:{sec}".format(min=workout_time/60,
                                               sec=workout_time%60))
     n_sets = 1
-    while (workout_time <= WORKOUT_DURATION):
+    while (workout_time <= total_duration):
 
         if n_sets % 3 == 0:
             rest(10)
 
         try:
-            current_time = do_workout(next(workout).lower(), SET_DURATION)
+            current_time = do_workout(next(workout).lower(), set_duration)
         except StopIteration:
-            workout = iter(WORKOUT.keys())
-            current_time = do_workout(next(workout).lower(), SET_DURATION)
+            workout = iter(routine)
+            current_time = do_workout(next(workout).lower(), set_duration)
 
         workout_time = (current_time - start_time).total_seconds()
 

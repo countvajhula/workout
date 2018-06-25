@@ -9,6 +9,9 @@
 .DS_Store
 profile
 
+# python noise
+__pycache__
+
 # tex output
 *.log
 *.aux
@@ -19,4 +22,3 @@ profile
 *.bbl
 *.blg
 *.fls
-
