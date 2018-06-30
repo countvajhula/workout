@@ -13,7 +13,7 @@ from routines import (
     GLUTES,
     CORE,
     PHYSIO,
-    WORKOUT_NAMES,
+    ACTIVITY_NAMES,
 )
 
 SET_DURATION = 30  # duration of each set in seconds
@@ -77,7 +77,7 @@ if __name__ == '__main__':
     start_time = datetime.now()
 
     routine = GENERAL
-    routine = [WORKOUT_NAMES[exercise] for exercise in routine]
+    routine = [ACTIVITY_NAMES[exercise] for exercise in routine]
     set_duration, total_duration = begin_workout(routine)
     print(set_duration)
     print(total_duration)
