@@ -24,8 +24,8 @@ ACTIVITY = {
     'CALF RAISES': 20,
     'RIGHT CALF RAISES': 21,
     'LEFT CALF RAISES': 22,
-    'WARM UP',
-    'REST',
+    'WARM UP': 23,
+    'REST': 24,
 }
 
 ACTIVITY_NAMES = {v: k for k, v in ACTIVITY.items()}
