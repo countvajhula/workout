@@ -6,6 +6,7 @@ from datetime import datetime
 from random import choice
 
 from routines import (
+    BASIC,
     FULL,
     GENERAL,
     ABS,
@@ -19,7 +20,7 @@ SET_DURATION = 30  # duration of each set in seconds
 
 
 def say(text):
-    os.system("say -v Alex {}".format(text))
+    os.system("say -v Anna {}".format(text))
 
 
 def rest(duration):
@@ -77,8 +78,9 @@ if __name__ == '__main__':
 
     routine = GENERAL
     routine = [WORKOUT_NAMES[exercise] for exercise in routine]
-    set_duration, total_duration = begin_workout(routine, 600)
+    set_duration, total_duration = begin_workout(routine)
     print(set_duration)
+    print(total_duration)
 
     workout = iter(['WARM UP'] + list(routine))
     workout_time = 0
@@ -86,7 +88,7 @@ if __name__ == '__main__':
     print("workout time = {min}:{sec}".format(min=workout_time/60,
                                               sec=workout_time%60))
     n_sets = 1
-    while (workout_time <= total_duration):
+    while True:
 
         if n_sets % 3 == 0:
             rest(10)
@@ -100,6 +102,8 @@ if __name__ == '__main__':
         workout_time = (current_time - start_time).total_seconds()
 
         n_sets += 1
+        if (workout_time > total_duration):
+            break
 
     print("workout time = {min}:{sec}".format(min=workout_time/60,
                                               sec=workout_time%60))
