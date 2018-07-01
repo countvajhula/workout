@@ -1,0 +1,81 @@
+
+class Activity:
+    name = ''
+    duration = 0
+    components = None
+
+    def __init__(self, duration):
+        self.duration = duration
+
+
+class JumpingJacks(Activity):
+    name = "Jumping jacks"
+
+class Pushups(Activity):
+    name = "Push ups"
+
+class Squats(Activity):
+    name = "Squats"
+
+class Planks(Activity):
+    name = "Planks"
+
+class LeftSidePlanks(Activity):
+    name = "Left side planks"
+
+class RightSidePlanks(Activity):
+    name = "Right side planks"
+
+class Crunches(Activity):
+    name = "Crunches"
+
+class ChairDips(Activity):
+    name = "Chair dips"
+
+class Bicycles(Activity):
+    name = "Bicycles"
+
+class Lunges(Activity):
+    name = "Lunges"
+
+class FireHydrants(Activity):
+    name = "Fire hydrants"
+
+class LeftFireHydrants(Activity):
+    name = "Left fire hydrants"
+
+class RightFireHydrants(Activity):
+    name = "Right fire hydrants"
+
+class LegRaises(Activity):
+    name = "Leg raises"
+
+class LeftLegRaises(Activity):
+    name = "Left leg raises"
+
+class RightLegRaises(Activity):
+    name = "Right leg raises"
+
+class WallSits(Activity):
+    name = "Wall sits"
+
+class WallSitsOnToes(Activity):
+    name = "Wall sits on toes"
+
+class WallSitsOnToesHeelsIn(Activity):
+    name = "Wall sits on toes with heels in"
+
+class CalfRaises(Activity):
+    name = "Calf raises"
+
+class LeftCalfRaises(Activity):
+    name = "Left calf raises"
+
+class RightCalfRaises(Activity):
+    name = "Right calf raises"
+
+class Warmup(Activity):
+    name = "Warm up"
+
+class Rest(Activity):
+    name = "Rest"

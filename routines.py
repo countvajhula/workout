@@ -1,85 +1,93 @@
+from activities import (
+    JumpingJacks,
+    Pushups,
+    Squats,
+    Planks,
+    LeftSidePlanks,
+    RightSidePlanks,
+    Crunches,
+    ChairDips,
+    Bicycles,
+    Lunges,
+    FireHydrants,
+    LeftFireHydrants,
+    RightFireHydrants,
+    LegRaises,
+    LeftLegRaises,
+    RightLegRaises,
+    WallSits,
+    WallSitsOnToes,
+    WallSitsOnToesHeelsIn,
+    CalfRaises,
+    RightCalfRaises,
+    LeftCalfRaises,
+    Warmup,
+    Rest,
+)
 
 # core, glutes, quads, calves, cardio, upper body, yoga, stretches, physio
 
-ACTIVITY = {
-    'JUMPING JACKS': 1,
-    'PUSH-UPS': 2,
-    'SQUATS': 3,
-    'PLANKS': 4,
-    'LEFT SIDE PLANKS': 5,
-    'RIGHT SIDE PLANKS': 6,
-    'CRUNCHES': 7,
-    'CHAIR DIPS': 8,
-    'BICYCLES': 9,
-    'LUNGES': 10,
-    'FIRE HYDRANTS': 11,
-    'LEFT FIRE HYDRANTS': 12,
-    'RIGHT FIRE HYDRANTS': 13,
-    'LEG RAISES': 14,
-    'LEFT LEG RAISES': 15,
-    'RIGHT LEG RAISES': 16,
-    'WALL SITS': 17,
-    'WALL SITS ON TOES': 18,
-    'WALL SITS ON TOES HEELS IN': 19,
-    'CALF RAISES': 20,
-    'RIGHT CALF RAISES': 21,
-    'LEFT CALF RAISES': 22,
-    'WARM UP': 23,
-    'REST': 24,
-}
-
-ACTIVITY_NAMES = {v: k for k, v in ACTIVITY.items()}
-
-FULL = ACTIVITY.keys()
-
 GENERAL = (
-    ACTIVITY['JUMPING JACKS'],
-    ACTIVITY['PUSH-UPS'],
-    ACTIVITY['SQUATS'],
-    ACTIVITY['PLANKS'],
-    ACTIVITY['CRUNCHES'],
-    ACTIVITY['CHAIR DIPS'],
-    ACTIVITY['BICYCLES'],
-    ACTIVITY['LUNGES'],
-    ACTIVITY['FIRE HYDRANTS'],
-    ACTIVITY['WALL SITS'],
-    ACTIVITY['LEG RAISES'],
-    ACTIVITY['CALF RAISES'],
+    Warmup,
+
+    JumpingJacks,
+    Pushups,
+    Squats,
+
+    Rest,
+
+    Planks,
+    Crunches,
+    ChairDips,
+
+    Rest,
+
+    Bicycles,
+    Lunges,
+    FireHydrants,
+
+    Rest,
+
+    WallSits,
+    LegRaises,
+    CalfRaises,
 )
 
 BASIC = (
-    ACTIVITY['JUMPING JACKS'],
-    ACTIVITY['PUSH-UPS'],
-    ACTIVITY['SQUATS'],
-    ACTIVITY['PLANKS'],
-    ACTIVITY['CHAIR DIPS'],
-    ACTIVITY['BICYCLES'],
-    ACTIVITY['LUNGES'],
-    ACTIVITY['FIRE HYDRANTS'],
-    ACTIVITY['WALL SITS'],
-    ACTIVITY['CALF RAISES'],
+    JumpingJacks,
+    Pushups,
+    Squats,
+    Planks,
+    Crunches,
+    ChairDips,
+    Bicycles,
+    Lunges,
+    FireHydrants,
+    WallSits,
+    CalfRaises,
 )
 
 ABS = (
-    ACTIVITY['PLANKS'],
-    ACTIVITY['LEFT SIDE PLANKS'],
-    ACTIVITY['RIGHT SIDE PLANKS'],
-    ACTIVITY['CRUNCHES'],
-    ACTIVITY['BICYCLES'],
+    Planks,
+    LeftSidePlanks,
+    RightSidePlanks,
+    Crunches,
+    Bicycles,
 )
 
 GLUTES = (
-    ACTIVITY['SQUATS'],
-    ACTIVITY['LEFT FIRE HYDRANTS'],
-    ACTIVITY['RIGHT FIRE HYDRANTS'],
+    Squats,
+    Lunges,
+    LeftFireHydrants,
+    RightFireHydrants,
 )
 
 CORE = ABS + GLUTES
 
 PHYSIO = (
-    ACTIVITY['LEFT LEG RAISES'],
-    ACTIVITY['RIGHT LEG RAISES'],
-    ACTIVITY['WALL SITS'],
-    ACTIVITY['WALL SITS ON TOES'],
-    ACTIVITY['WALL SITS ON TOES HEELS IN'],
+    LeftLegRaises,
+    RightLegRaises,
+    WallSits,
+    WallSitsOnToes,
+    WallSitsOnToesHeelsIn,
 )
