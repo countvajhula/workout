@@ -27,7 +27,6 @@ def begin_workout(routine, total_duration=None):
     with a default set duration ("standard" workout), or set duration
     is derived from the specified total duration ("timed" workout).
 
-    TODO: handle rest, exercise, and warmup uniformly.
     TODO: add notion of "reps."
     """
     if total_duration:
@@ -78,10 +77,14 @@ if __name__ == '__main__':
     while True:
 
         try:
-            current_time = do_exercise(next(workout), set_duration)
+            exercise = next(workout)
+            duration = exercise.duration * set_duration
+            current_time = do_exercise(exercise, duration)
         except StopIteration:
             workout = iter(routine)
-            current_time = do_exercise(next(workout), set_duration)
+            exercise = next(workout)
+            duration = exercise.duration * set_duration
+            current_time = do_exercise(exercise, duration)
 
         workout_time = (current_time - start_time).total_seconds()
 

@@ -4,7 +4,8 @@ class Activity:
     duration = 0
     components = None
 
-    def __init__(self, duration):
+    def __init__(self, duration=1):
+        # duration is relative to parent activity
         self.duration = duration
 
 

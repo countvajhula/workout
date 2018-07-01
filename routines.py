@@ -28,29 +28,29 @@ from activities import (
 # core, glutes, quads, calves, cardio, upper body, yoga, stretches, physio
 
 GENERAL = (
-    Warmup,
+    Warmup(1),
 
-    JumpingJacks,
-    Pushups,
-    Squats,
+    JumpingJacks(1),
+    Pushups(1),
+    Squats(1),
 
-    Rest,
+    Rest(0.3),
 
-    Planks,
-    Crunches,
-    ChairDips,
+    Planks(1),
+    Crunches(1),
+    ChairDips(1),
 
-    Rest,
+    Rest(0.3),
 
-    Bicycles,
-    Lunges,
-    FireHydrants,
+    Bicycles(1),
+    Lunges(1),
+    FireHydrants(1),
 
-    Rest,
+    Rest(0.3),
 
-    WallSits,
-    LegRaises,
-    CalfRaises,
+    WallSits(1),
+    LegRaises(1),
+    CalfRaises(1),
 )
 
 BASIC = (
