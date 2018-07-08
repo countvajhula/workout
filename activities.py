@@ -57,6 +57,18 @@ class LeftLegRaises(Activity):
 class RightLegRaises(Activity):
     name = "Right leg raises"
 
+class TableLeftLegRaises(Activity):
+    name = "Table position left leg raises"
+
+class TableRightLegRaises(Activity):
+    name = "Table position right leg raises"
+
+class TableLeftLegHighRaises(Activity):
+    name = "Table position high left leg raises"
+
+class TableRightLegHighRaises(Activity):
+    name = "Table position high right leg raises"
+
 class WallSits(Activity):
     name = "Wall sits"
 

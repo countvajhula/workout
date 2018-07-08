@@ -65,7 +65,7 @@ def do_exercise(exercise, duration):
     return datetime.now()
 
 
-if __name__ == '__main__':
+def main():
     start_time = datetime.now()
 
     routine = GENERAL
@@ -75,22 +75,19 @@ if __name__ == '__main__':
     workout_time = 0
 
     while True:
-
         try:
             exercise = next(workout)
             duration = exercise.duration * set_duration
             current_time = do_exercise(exercise, duration)
         except StopIteration:
-            workout = iter(routine)
-            exercise = next(workout)
-            duration = exercise.duration * set_duration
-            current_time = do_exercise(exercise, duration)
+            break
 
         workout_time = (current_time - start_time).total_seconds()
-
-        if (workout_time > total_duration):
-            break
 
     print("workout time = {min}:{sec}".format(min=workout_time/60,
                                               sec=workout_time%60))
     end_workout()
+
+
+if __name__ == '__main__':
+    main()
