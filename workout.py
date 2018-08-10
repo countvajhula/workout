@@ -18,7 +18,7 @@ SET_DURATION = 30  # duration of each set in seconds
 
 
 def say(text):
-    os.system("say -v Anna {}".format(text))
+    os.system("say -v Luca {}".format(text))
 
 
 def begin_workout(routine, total_duration=None):

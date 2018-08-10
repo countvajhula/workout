@@ -25,6 +25,10 @@ from activities import (
     CalfRaises,
     RightCalfRaises,
     LeftCalfRaises,
+    SquatPulses,
+    StandingObliqueCrunches,
+    ClamShells,
+    ToySoldiers,
     Warmup,
     Rest,
 )
@@ -72,9 +76,18 @@ BASIC = (
 )
 
 ABS = (
+    Warmup(1),
+
+    StandingObliqueCrunches(1.5),
+
+    Rest(0.3),
+
     Planks(1),
     LeftSidePlanks(1),
     RightSidePlanks(1),
+
+    Rest(0.3),
+
     Crunches(1),
     Bicycles(1),
 )
@@ -90,11 +103,47 @@ GLUTES = (
     TableRightLegHighRaises(1),
 )
 
-CORE = ABS + GLUTES
+#CORE = ABS + GLUTES
+CORE = (
+    Warmup(1),
+
+    Squats(1),
+    Lunges(1),
+    StandingObliqueCrunches(1),
+
+    Rest(0.3),
+
+    Planks(1),
+    LeftSidePlanks(1),
+    RightSidePlanks(1),
+
+    Rest(0.3),
+
+    LeftFireHydrants(1),
+    RightFireHydrants(1),
+    TableLeftLegRaises(1),
+    TableRightLegRaises(1),
+    TableLeftLegHighRaises(1),
+    TableRightLegHighRaises(1),
+
+    Rest(0.3),
+
+    Crunches(1),
+    Bicycles(1),
+)
 
 PHYSIO = (
-    LeftLegRaises(1),
-    RightLegRaises(1),
+    ToySoldiers(1),
+    SquatPulses(1),
+    ClamShells(1),
+
+    Rest(0.3),
+
+    LeftLegRaises(1.5),
+    RightLegRaises(1.5),
+
+    Rest(0.3),
+
     WallSits(1),
     WallSitsOnToes(1),
     WallSitsOnToesHeelsIn(1),

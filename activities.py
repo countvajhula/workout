@@ -87,6 +87,31 @@ class LeftCalfRaises(Activity):
 class RightCalfRaises(Activity):
     name = "Right calf raises"
 
+class SquatPulses(Activity):
+    name = "Squat pulses"
+
+class StandingObliqueCrunches(Activity):
+    name = "Standing crunches"
+
+class ClamShells(Activity):
+    name = "Clam shells"
+
+class ToySoldiers(Activity):
+    name = "Toy soldiers"
+
+class BandedSumoWalk(Activity):
+    name = "Banded sumo walk"
+
+class FigureFours(Activity):
+    name = "Figure fours"
+
+class SeatedMarches(Activity):
+    """ With equal resistance from hands """
+    name = "Seated marches"
+
+class SitToStand(Activity):
+    name = "Sit to stand"
+
 class Warmup(Activity):
     name = "Warm up"
 
