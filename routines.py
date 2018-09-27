@@ -29,6 +29,9 @@ from activities import (
     StandingObliqueCrunches,
     ClamShells,
     ToySoldiers,
+    FigureFours,
+    SeatedMarches,
+    SitToStand,
     Warmup,
     Rest,
 )
@@ -139,8 +142,15 @@ PHYSIO = (
 
     Rest(0.3),
 
+    FigureFours(1.5),
+    SeatedMarches(1.5),
     LeftLegRaises(1.5),
     RightLegRaises(1.5),
+
+    Rest(0.3),
+
+    SitToStand(1),
+    Squats(1),
 
     Rest(0.3),
 
