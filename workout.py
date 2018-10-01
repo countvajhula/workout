@@ -11,14 +11,16 @@ from routines import (
     ABS,
     GLUTES,
     CORE,
-    PHYSIO,
+    PHYSIO_KNEES,
+    PHYSIO_BACK_AND_NECK,
+    PHYSIO_BALANCE,
 )
 
 SET_DURATION = 30  # duration of each set in seconds
 
 
 def say(text):
-    os.system("say -v Luca {}".format(text))
+    os.system("say -v Fiona {}".format(text))
 
 
 def begin_workout(routine, total_duration=None):
@@ -68,7 +70,7 @@ def do_exercise(exercise, duration):
 def main():
     start_time = datetime.now()
 
-    routine = GENERAL
+    routine = PHYSIO_KNEES
     set_duration, total_duration = begin_workout(routine)
 
     workout = iter(routine)
@@ -85,7 +87,7 @@ def main():
         workout_time = (current_time - start_time).total_seconds()
 
     print("workout time = {min}:{sec}".format(min=workout_time/60,
-                                              sec=workout_time%60))
+                                              sec=workout_time % 60))
     end_workout()
 
 
