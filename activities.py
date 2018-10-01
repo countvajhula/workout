@@ -538,7 +538,7 @@ class UlnarNerveGlide(Activity):
     name = "Ulnar nerve glide"
 
 
-class SupineNods:
+class SupineNods(Activity):
     """ (AKA "Supine deep neck flexor activation") Lie on your back
     with your knees bent and your feet flat on the floor.  Place a
     pillow under your head and look up towards the ceiling.  Visualise
