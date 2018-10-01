@@ -1,3 +1,14 @@
+"""
+Exercise descriptions from:
+    PhysiApp (https://us.physiapp.com),
+    Chiro Medical Group (https://www.chiromedicalgroup.com/),
+    Greatist (https://greatist.com/fitness/perfect-plank),
+    Wikipedia (https://en.wikipedia.org)
+    Men's Journal (https://www.mensjournal.com/)
+    BodyBuilding.com (https://www.bodybuilding.com)
+    Popsugar Fitness (https://www.popsugar.com/fitness)
+"""
+
 
 class Activity:
     name = ''
@@ -34,26 +45,92 @@ class Squats(Activity):
 
 
 class Planks(Activity):
+    """
+    1. Plant the hands directly under the shoulders (slightly wider
+    than shoulder-width apart) like you’re about to do a
+    push-up. Alternatively, place the forearms on the ground with the
+    elbows aligned below the shoulders, and arms parallel to the body
+    at about shoulder-width distance. If flat palms bother your
+    wrists, clasp your hands together.
+
+    2. Ground the toes into the floor and squeeze the glutes to
+    stabilize the body. Your legs should be working in the move too;
+    careful not to lock or hyperextend your knees.
+
+    3. Neutralize the neck and spine by looking at a spot on the floor
+    about a foot beyond the hands. Your head should be in line with
+    your back.
+
+    4. Hold the position for 20 seconds. As you get more comfortable
+    with the move, hold your plank for as long as possible without
+    compromising form or breath.
+    """
     name = "Planks"
 
 
 class LeftSidePlanks(Activity):
+    """ This variation better engages the obliques, or the side muscles of
+    the core, than a standard plank. Lie on one side with the legs
+    stacked on top of one another then prop the body up on the hand or
+    elbow while keeping the feet stacked. Modify the position by
+    raising the opposing arm or leg (or both!) in the air to make the
+    plank more difficult, or make the move easier by crossing the
+    upper leg in front of the body for additional support.
+    """
     name = "Left side planks"
 
 
 class RightSidePlanks(Activity):
+    """ This variation better engages the obliques, or the side muscles of
+    the core, than a standard plank. Lie on one side with the legs
+    stacked on top of one another then prop the body up on the hand or
+    elbow while keeping the feet stacked. Modify the position by
+    raising the opposing arm or leg (or both!) in the air to make the
+    plank more difficult, or make the move easier by crossing the
+    upper leg in front of the body for additional support.
+    """
     name = "Right side planks"
 
 
 class Crunches(Activity):
+    """ A crunch begins with lying face up on the floor with knees
+    bent. The movement begins by curling the shoulders towards the
+    pelvis. The hands can be behind or beside the neck or crossed over
+    the chest. Injury can be caused by pushing against the head or
+    neck with hands.
+    """
     name = "Crunches"
 
 
 class ChairDips(Activity):
+    """ Sit on the edge of the seat and place your palms on either side of
+    your hips. Shift your weight onto your palms, lifting your butt
+    forward and off the seat of the chair. With bent knees, bend your
+    elbows and lower your upper body, creating 90-degree angles with
+    your arms. Straighten your arms and repeat. To increase the
+    difficulty, extend your legs.
+    """
     name = "Chair dips"
 
 
 class Bicycles(Activity):
+    """ 1. Lie flat on the floor with your lower back pressed to the
+    ground (pull your navel in to also target your deep abs).
+
+    2. Put your hands behind your head, then bring your knees in
+    towards your chest and lift your shoulder blades off the ground,
+    but be sure not to pull on your neck.
+
+    3. Straighten your right leg out to about a 45-degree angle to the
+    ground while turning your upper body to the left, bringing your
+    right elbow towards the left knee. Make sure your rib cage is
+    moving and not just your elbows.
+
+    4. Now switch sides and do the same motion on the other side to
+    complete one rep.
+
+    5. Do three sets of 20 reps.
+    """
     name = "Bicycles"
 
 
@@ -62,6 +139,19 @@ class Lunges(Activity):
 
 
 class FireHydrants(Activity):
+    """
+    1. Position yourself on your hands and knees on the ground. This
+    will be your starting position.
+
+    2. Keeping the knee in a bent position, abduct the femur, moving
+    your knee away from the midline of the body.
+
+    3. Pause at the top of the motion, and then slowly return to the
+    starting position.
+
+    4. Perform this slowly for a number of repetitions, and repeat on
+    the other side.
+    """
     name = "Fire hydrants"
 
 
@@ -74,7 +164,7 @@ class RightFireHydrants(Activity):
 
 
 class LegRaises(Activity):
-    """To begin exercise, bend one knee and keep the other leg
+    """ To begin exercise, bend one knee and keep the other leg
     straight Try to engage your inner and middle thigh muscle before
     you lift the leg upward You should be lifting the leg to the
     height of the other knee, hold it then slowly lower your leg
@@ -110,8 +200,7 @@ class TableRightLegHighRaises(Activity):
 
 
 class WallSits(Activity):
-    """
-    (AKA VMO Wall Circuit) Perform a wall sit with feet about hip
+    """ (AKA VMO Wall Circuit) Perform a wall sit with feet about hip
     width apart and toes pointing forward. Hold position for
     recommended duration. Next, bring heels together with toes
     pointing out and hold. Finally, with toes pointing outward, lift
@@ -132,6 +221,7 @@ class WallSitsOnToesHeelsIn(Activity):
 
 
 class CalfRaises(Activity):
+    """ TODO: duplicated in "heel raises" """
     name = "Calf raises"
 
 
@@ -179,6 +269,18 @@ class ClamShells(Activity):
 
 
 class ToySoldiers(Activity):
+    """ Stand upright with your arms by your sides.  Raise one arm and
+    move the opposite leg forward at the same time switching sides as
+    you progress in a marching motion.  Start the exercise slowly then
+    increase the speed of the motion as you continue.  Keep switching
+    your legs, moving them out and upwards in front of you with your
+    arms swinging freely.  Keep your knees straight and your feet
+    Dorsi flexed, pointed to the ceiling as you raise your leg.
+    Maintain good balance between both legs and keep your abdominals
+    pulled in throughout.
+
+    Recommended: 10 reps 3 sets
+    """
     name = "Toy soldiers"
 
 
@@ -229,8 +331,7 @@ class SeatedMarches(Activity):
 
 
 class SitToStand(Activity):
-    """
-    Sit in a chair with your feet flat on the floor.  Cross your arms
+    """ Sit in a chair with your feet flat on the floor.  Cross your arms
     in front of your chest so you are not tempted to push off of your
     thighs for momentum.  Stand up, then slowly sit back down and
     repeat a number of times.
@@ -260,11 +361,21 @@ class FounderSequences(Activity):
 
 
 class StepDowns(Activity):
+    """ Stand on a step with the affected leg weight bearing. The other
+    leg should be off to the side and hanging. Next, bend at the hips
+    and the knees to lower yourself down until the heel inches towards
+    the ground.
+
+    Do not let the hips drop or hike up during movement.
+
+    Recommended: 1 s 10 reps 2 sets
+    Equipment: Foot stool
+    """
     name = "Step downs"
 
 
 class StandingSkaters(Activity):
-    """Start with a slight bend in your knees and hips with your butt
+    """ Start with a slight bend in your knees and hips with your butt
     sticking out behind you. Keep the core engaged and low back
     straight throughout. Extend one leg diagonally back and out behind
     you while keeping the rest of the body still. You should feel this
@@ -387,7 +498,7 @@ class SingleLegBalance(Activity):
 
 
 class SLSWobbleCushion(Activity):
-    """Place a wobble cushion on the floor near a wall, and stand in
+    """ Place a wobble cushion on the floor near a wall, and stand in
     the middle on your affected leg.  Try and balance for as long as
     you can.
 
@@ -470,6 +581,32 @@ class SegmentalThoracicFoamRoll(Activity):
     Equipment: Mat, foam roller
     """
     name = "Segmental thoracic foam roll"
+
+
+class NeckStretch(Activity):
+    """
+    Start in a seated position.  Take your hand, place it on your head
+    and gently pull your ear towards your shoulder and hold.  Then
+    angle the head looking down towards the knee and gently pull the
+    head with comfortable tension.
+
+    Recommended: 30 s 1 rep 2 sets
+    Equipment: Chair
+    """
+    name = "Two part neck stretch"
+
+
+class DoorwayPecStretch(Activity):
+    """
+    Position arms into a shape of a "W' and plant your hands on the
+    edge of the door frame. Take one step forward and lean your body
+    weight forward until you feel a stretch across the chest. Exercise
+    may be performed with one arm at a time if the doorway is too
+    long. Complete for recommended duration.
+
+    Recommended: 30 s 1 rep 2 sets
+    """
+    name = "Doorway pec stretch"
 
 
 class Warmup(Activity):
