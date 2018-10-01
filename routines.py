@@ -32,6 +32,21 @@ from activities import (
     FigureFours,
     SeatedMarches,
     SitToStand,
+    HamstringStretchesWithStrap,
+    BandedSumoWalk,
+    NeckStretch,
+    HeelRaises,
+    StepDowns,
+    SingleLegBalance,
+    LowTrapeziusRows,
+    MidTrapeziusRows,
+    BirdDogs,
+    SupineNods,
+    SegmentalThoracicFoamRoll,
+    DoorwayPecStretch,
+    UlnarNerveGlide,
+    FounderSequences,
+    SLSWobbleCushion,
     Warmup,
     Rest,
 )
@@ -106,7 +121,7 @@ GLUTES = (
     TableRightLegHighRaises(1),
 )
 
-#CORE = ABS + GLUTES
+# CORE = ABS + GLUTES
 CORE = (
     Warmup(1),
 
@@ -135,14 +150,14 @@ CORE = (
     Bicycles(1),
 )
 
-PHYSIO = (
+PHYSIO_KNEES = (
     ToySoldiers(1),
     SquatPulses(1),
     ClamShells(1),
+    HamstringStretchesWithStrap(1),
 
     Rest(0.3),
 
-    FigureFours(1.5),
     SeatedMarches(1.5),
     LeftLegRaises(1.5),
     RightLegRaises(1.5),
@@ -151,10 +166,50 @@ PHYSIO = (
 
     SitToStand(1),
     Squats(1),
+    BandedSumoWalk(1),
+    FigureFours(1.5),
 
     Rest(0.3),
 
     WallSits(1),
     WallSitsOnToes(1),
     WallSitsOnToesHeelsIn(1),
+)
+
+PHYSIO_BACK_AND_NECK = (
+    NeckStretch(1),
+    DoorwayPecStretch(1),
+    UlnarNerveGlide(1),
+    FounderSequences(1),
+
+    Rest(0.3),
+
+    BirdDogs(1.5),
+    SupineNods(1),
+    SegmentalThoracicFoamRoll(1),
+
+    Rest(0.3),
+
+    Squats(1),
+    LowTrapeziusRows(1),
+    MidTrapeziusRows(1),
+
+    Rest(0.3),
+
+)
+
+PHYSIO_BALANCE = (
+    SingleLegBalance(1.5),
+
+    Rest(0.3),
+
+    SLSWobbleCushion(1.5),
+
+    Rest(0.3),
+
+    StepDowns(1.5),
+
+    Rest(0.3),
+
+    HeelRaises(1.5),
 )
