@@ -598,7 +598,7 @@ class NeckStretch(Activity):
 
 class DoorwayPecStretch(Activity):
     """
-    Position arms into a shape of a "W' and plant your hands on the
+    Position arms into a shape of a "W" and plant your hands on the
     edge of the door frame. Take one step forward and lean your body
     weight forward until you feel a stretch across the chest. Exercise
     may be performed with one arm at a time if the doorway is too

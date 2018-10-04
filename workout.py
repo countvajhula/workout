@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import re
 import time
 from datetime import datetime
 from random import choice
@@ -45,8 +46,11 @@ def end_workout():
     say('Workout complete! Congratulations!')
 
 
-def do_exercise(exercise, duration):
+def do_exercise(exercise, duration, coaching=False):
     say('Next: {exercise}.'.format(exercise=exercise.name))
+    if coaching and exercise.__doc__:
+        description = re.sub('[^a-zA-Z0-9 \.]', ' ', exercise.__doc__)
+        say(description)
     time.sleep(2)
     say('3... 2... 1... GO! {exercise}'.format(exercise=exercise.name))
     time.sleep(duration/2.0)
@@ -70,7 +74,9 @@ def do_exercise(exercise, duration):
 def main():
     start_time = datetime.now()
 
-    routine = PHYSIO_KNEES
+    routine = PHYSIO_BACK_AND_NECK
+    coaching = True
+
     set_duration, total_duration = begin_workout(routine)
 
     workout = iter(routine)
@@ -80,7 +86,7 @@ def main():
         try:
             exercise = next(workout)
             duration = exercise.duration * set_duration
-            current_time = do_exercise(exercise, duration)
+            current_time = do_exercise(exercise, duration, coaching)
         except StopIteration:
             break
 
