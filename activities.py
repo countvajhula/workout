@@ -609,6 +609,51 @@ class DoorwayPecStretch(Activity):
     name = "Doorway pec stretch"
 
 
+class UpperTrapeziusMFR(Activity):
+    """
+    Place a lacrosse ball on the top of your shoulder as shown. Hinge
+    at the hips and pin the ball against the wall and roll side to
+    side, up and down, or hold. Complete for recommended hold
+    duration.
+
+    Repeat to opposite side if necessary.
+
+    Recommended: 2 m
+    Equipment: Lacrosse Ball
+    """
+    name = "Upper trapezius myofascial release with ball"
+
+
+class LevatorScapulaART(Activity):
+    """
+    Pin the ball on the wall with the back of your upper
+    shoulder. Lean into it to adjust pressure. Next, turn your head
+    towards the opposite pant pocket of the ball and repeat movement
+    to release tension. Complete for recommended duration and repeat.
+
+    Recommended: 60 s 1 rep 1 set
+    Equipment: Lacrosse Ball
+    """
+    name = "Levator scapulae active release technique with ball"
+
+
+class RhomboidMFR(Activity):
+    """
+    Place a lacrosse ball or tennis ball in between the shoulder blade
+    and spine.  Hold the ball in place until you can lean your body
+    into the wall to hold it up.  Move the ball around until you feel
+    a tender spot in the Rhomboids When the tender spot has been
+    found, move your arm across your body As your arm moves across the
+    body, rotate the thumb downward as you finish across your body
+    Bringing your arm back, rotate the thumb upward till your back at
+    the starting position.
+
+    Recommended: 1 m 1 rep 2 sets
+    Equipment: Lacrosse Ball
+    """
+    name = "Rhomboid myofascial release with ball"
+
+
 class Warmup(Activity):
     name = "Warm up"
 
