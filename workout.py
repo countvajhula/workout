@@ -15,6 +15,8 @@ from routines import (
     PHYSIO_KNEES,
     PHYSIO_BACK_AND_NECK,
     PHYSIO_BALANCE,
+    PHYSIO_CUSTOM,
+    PHYSIO_COMBINED,
 )
 
 SET_DURATION = 30  # duration of each set in seconds
@@ -74,7 +76,8 @@ def do_exercise(exercise, duration, coaching=False):
 def main():
     start_time = datetime.now()
 
-    routine = PHYSIO_BACK_AND_NECK
+    # add itinerary
+    routine = PHYSIO_COMBINED
     coaching = True
 
     set_duration, total_duration = begin_workout(routine)

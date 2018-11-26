@@ -49,6 +49,9 @@ from activities import (
     SegmentalThoracicFoamRoll,
     NeckStretch,
     DoorwayPecStretch,
+    UpperTrapeziusMFR,
+    LevatorScapulaART,
+    RhomboidMFR,
     Warmup,
     Rest,
 )
@@ -199,6 +202,9 @@ PHYSIO_BACK_AND_NECK = (
 
     Rest(0.3),
 
+    UpperTrapeziusMFR(1),
+    LevatorScapulaART(1),
+    RhomboidMFR(1),
 )
 
 PHYSIO_BALANCE = (
@@ -217,21 +223,59 @@ PHYSIO_BALANCE = (
     HeelRaises(1.5),
 )
 
-
 PHYSIO_CUSTOM = (
+
     Warmup(0.5),
+
     Squats(1.0),
     FounderSequences(1.0),
     BandedSumoWalk(1.5),
+
     Rest(0.3),
+
     LeftCalfRaises(1.0),
     RightCalfRaises(1.0),
     FigureFours(1.0),
+
     Rest(0.3),
+
     ToySoldiers(1.0),
     SeatedMarches(1.5),
+
     Rest(0.3),
+
     HamstringStretchesWithStrap(1.5),
+    SegmentalThoracicFoamRoll(2.0),
+    SLSWobbleCushion(2.0),
+)
+
+PHYSIO_COMBINED = (
+
+    Warmup(0.5),
+
+    SingleLegBalance(1.5),
+    Squats(1.0),
+    FounderSequences(1.0),
+    BandedSumoWalk(1.5),
+
+    Rest(0.3),
+
+    FigureFours(1.0),
+    SupineNods(1.0),
+    ClamShells(1.0),
+
+    Rest(0.3),
+
+    ToySoldiers(1.0),
+    SeatedMarches(1.5),
+    WallSits(1.0),
+    WallSitsOnToes(1.0),
+    WallSitsOnToesHeelsIn(1.0),
+
+    Rest(0.3),
+
+    HamstringStretchesWithStrap(1.5),
+    BirdDogs(1.5),
     SegmentalThoracicFoamRoll(2.0),
     SLSWobbleCushion(2.0),
 )
