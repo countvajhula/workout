@@ -7,16 +7,18 @@ from datetime import datetime
 from random import choice
 
 from routines import (
-    BASIC,
-    GENERAL,
     ABS,
-    GLUTES,
+    BASIC,
+    BEEFCAKE,
     CORE,
+    GENERAL,
+    GLUTES,
     PHYSIO_KNEES,
     PHYSIO_BACK_AND_NECK,
     PHYSIO_BALANCE,
     PHYSIO_CUSTOM,
     PHYSIO_COMBINED,
+    STRETCHES,
 )
 
 SET_DURATION = 30  # duration of each set in seconds
@@ -26,7 +28,7 @@ def say(text):
     os.system("say -v Fiona {}".format(text))
 
 
-def begin_workout(routine, total_duration=None):
+def begin_workout(routine_name, total_duration=None):
     """
     Either total workout duration is a function of the selected routine
     with a default set duration ("standard" workout), or set duration
@@ -34,14 +36,17 @@ def begin_workout(routine, total_duration=None):
 
     TODO: add notion of "reps."
     """
+    routine = globals().get(routine_name)
     if total_duration:
         set_duration = float(total_duration) / len(routine)
     else:
         set_duration = SET_DURATION
         total_duration = len(routine) * set_duration
 
-    say('Beginning {} minute workout.'.format(total_duration/60))
-    return (set_duration, total_duration)
+    say('Beginning {} minute {} workout.'
+        .format(total_duration/60, routine_name))
+
+    return (routine, set_duration, total_duration)
 
 
 def end_workout():
@@ -77,10 +82,10 @@ def main():
     start_time = datetime.now()
 
     # add itinerary
-    routine = PHYSIO_COMBINED
-    coaching = True
+    routine_name = "BEEFCAKE"
+    coaching = False
 
-    set_duration, total_duration = begin_workout(routine)
+    routine, set_duration, total_duration = begin_workout(routine_name)
 
     workout = iter(routine)
     workout_time = 0
