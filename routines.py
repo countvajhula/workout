@@ -279,3 +279,58 @@ PHYSIO_COMBINED = (
     SegmentalThoracicFoamRoll(2.0),
     SLSWobbleCushion(2.0),
 )
+
+STRETCHES = (
+    Warmup(0.5),
+    # TODO: put some good/the right stretches in here
+    FigureFours(1.0),
+    HamstringStretchesWithStrap(1.5),
+    DoorwayPecStretch(1.0),
+    NeckStretch(1.0),
+)
+
+BEEFCAKE = (
+    Warmup(1),
+
+    JumpingJacks(1),
+    Pushups(1),
+    ChairDips(1),
+
+    Rest(0.3),
+
+    FigureFours(1.0),
+    LegRaises(1),
+    CalfRaises(1),
+
+    Rest(0.3),
+
+    WallSits(1.0),
+    WallSitsOnToes(1.0),
+    WallSitsOnToesHeelsIn(1.0),
+
+    Rest(0.3),
+
+    Squats(1),
+    Lunges(1),
+    ClamShells(1),
+
+    Rest(0.3),
+
+    Planks(1),
+    LeftSidePlanks(1),
+    RightSidePlanks(1),
+
+    Rest(0.3),
+
+    LeftFireHydrants(1),
+    RightFireHydrants(1),
+    TableLeftLegRaises(1),
+    TableRightLegRaises(1),
+    TableLeftLegHighRaises(1),
+    TableRightLegHighRaises(1),
+
+    Rest(0.3),
+
+    Crunches(1),
+    Bicycles(1),
+)
