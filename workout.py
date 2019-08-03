@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import os
+import platform
 import re
 import time
 from datetime import datetime
@@ -21,11 +22,30 @@ from routines import (
     STRETCHES,
 )
 
+from constants import (WINDOWS, MAC_OS)
+
 SET_DURATION = 30  # duration of each set in seconds
+
+def say_mac_os(text):
+    os.system("say -v Fiona {}".format(text))
+
+def say_linux(text):
+    # Linux distros come with `spd-say`.
+    # Preinstalled on ubuntu, but you may need it to install
+    # it on Fedora and openSUSE
+    os.system("spd-say {}".format(text))
 
 
 def say(text):
-    os.system("say -v Fiona {}".format(text))
+    sys_platform = platform.system()
+    if sys_platform == MAC_OS:
+        say_mac_os(text)
+    elif sys_platform == WINDOWS:
+        # TODO
+        pass
+    else:
+        # LINUX
+        say_linux(text)
 
 
 def begin_workout(routine_name, total_duration=None):
