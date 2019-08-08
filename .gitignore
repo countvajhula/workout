@@ -22,3 +22,8 @@ __pycache__
 *.bbl
 *.blg
 *.fls
+
+# idea specific stuff
+.idea
+vent/
+*.iml
