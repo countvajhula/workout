@@ -1,2 +1,2 @@
 MAC_OS = 'DARWIN'
-WINDOWS = 'Windows'
+WINDOWS = 'WINDOWS'

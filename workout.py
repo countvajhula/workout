@@ -37,7 +37,7 @@ def say_linux(text):
 
 
 def say(text):
-    sys_platform = platform.system()
+    sys_platform = platform.system().upper()
     if sys_platform == MAC_OS:
         say_mac_os(text)
     elif sys_platform == WINDOWS:
