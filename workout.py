@@ -32,6 +32,7 @@ except ImportError:  # py2
 
 SET_DURATION = 30  # duration of each set in seconds
 
+# put a config file at this path, e.g. ~/.my_workout/config.ini
 CONFIG_FILENAME = 'config.ini'
 CONFIG_ROOT = os.getenv("WORKOUT_ROOT", os.path.expanduser("~/.my_workout"))
 CONFIG_FILE = os.path.join(CONFIG_ROOT, CONFIG_FILENAME)
