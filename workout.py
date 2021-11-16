@@ -126,6 +126,8 @@ class Workout(object):
         say('Workout complete! Congratulations!')
 
     def do_exercise(self, exercise, duration):
+        # TODO: use threads and interrupts to time the workout more accurately,
+        # and so that e.g. taunts are not unaccounted for, time wise
         say('Next: {exercise}.'.format(exercise=exercise.name))
         if self.coaching and exercise.__doc__:
             description = re.sub('[^a-zA-Z0-9 \.]', ' ', exercise.__doc__)
@@ -152,6 +154,7 @@ class Workout(object):
 
 
 # TODO: make a CLI for non-persistent config like workout type and coaching
+# TODO: use a default config if config file is absent
 def main():
 
     # add itinerary
