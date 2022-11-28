@@ -52,6 +52,12 @@ from activities import (
     UpperTrapeziusMFR,
     LevatorScapulaART,
     RhomboidMFR,
+    ThoracicExtension,
+    ExternalRotationWithBand,
+    RowWithTheraband,
+    ScapularRetraction,
+    StrengtheningExternalRotation,
+    StrengtheningInternalRotation,
     Warmup,
     Rest,
 )
@@ -247,6 +253,20 @@ PHYSIO_CUSTOM = (
     HamstringStretchesWithStrap(1.5),
     SegmentalThoracicFoamRoll(2.0),
     SLSWobbleCushion(2.0),
+)
+
+PHYSIO_SHOULDER = (
+    ThoracicExtension(0.1),
+    ExternalRotationWithBand(0.1),
+    RowWithTheraband(0.1),
+
+    Rest(0.3),
+
+    ScapularRetraction(0.1),
+    StrengtheningExternalRotation(0.1),
+    StrengtheningInternalRotation(0.1),
+
+    Rest(0.3),
 )
 
 PHYSIO_COMBINED = (

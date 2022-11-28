@@ -599,10 +599,12 @@ class NeckStretch(Activity):
 class DoorwayPecStretch(Activity):
     """
     Position arms into a shape of a "W" and plant your hands on the
-    edge of the door frame. Take one step forward and lean your body
-    weight forward until you feel a stretch across the chest. Exercise
-    may be performed with one arm at a time if the doorway is too
-    long. Complete for recommended duration.
+    edge of the door frame. Take one step forward and lean your body weight
+    forward until you feel a stretch across the chest and the front part of
+    your arm. Exercise may be performed with one arm at a time if the doorway
+    is too long. Place the arm lower than horizontal to emphasize the upper
+    chest, place it perpendicularly to stretch the middle portion, and higher
+    than parallel to stretch the lower portion.
 
     Recommended: 30 s 1 rep 2 sets
     """
@@ -652,6 +654,85 @@ class RhomboidMFR(Activity):
     Equipment: Lacrosse Ball
     """
     name = "Rhomboid myofascial release with ball"
+
+
+class ThoracicExtension(Activity):
+    """
+    Sit all the way back in a chair so that your back is leaning on the
+    backrest. Put your hands on your shoulders with your elbows toward the
+    ceiling. Extend over the chair and then come back to the starting position.
+
+    Recommended: 3 s 10 rep 2 sets
+    Equipment: Chair
+    """
+    name = "Thoracic extension"
+
+
+class ExternalRotationWithBand(Activity):
+    """
+    Stand up with two supports (towels or balls) between the elbows and the
+    torso. Keeping your shoulders retracted, externally rotate the arms against
+    the resistance of the band in a controlled movement.
+
+    Recommended: 10 rep 3 sets
+    Equipment: Band
+    """
+    name = "External rotation with band"
+
+
+class RowWithTheraband(Activity):
+    """
+    Stand and tie elastic in front of you at waist level and hold each end with
+    your hands. With your shoulders down and back, pull your arms back as far
+    as possible with your elbows bent. Slowly return to initial position and
+    repeat.
+
+    Recommended: 2 s 10 rep 3 sets
+    Equipment: Band
+    """
+    name = "Row with theraband"
+
+
+class ScapularRetraction(Activity):
+    """
+    Lie face down on a table with your arm hanging off the sides, thumbs up and
+    shoulders back and down. Raise your arms up to shoulder level (with hands
+    aligned with the shoulders) while keeping your elbows straight. Lower your
+    arms and repeat. Keep your thumbs pointing up at all times.
+
+    Recommended: 3 s 10 rep 2 sets
+    Equipment: Table
+    """
+    name = "Scapular retraction"
+
+
+class StrengtheningExternalRotation(Activity):
+    """
+    Stand and tie elastic on the opposite side of injured arm at elbow
+    level. Hold the end of elastic and bend your elbow to 90 degrees. Tuck your
+    chin in and pull the tip of your shoulder backwards while you pull the
+    elastic out to the side by rotating your forearm out. Keep your elbow
+    against your body and your chin tucked in at all times. Slowly return to
+    initial position and repeat.
+
+    Recommended: 15 rep 2 sets
+    Equipment: Band
+    """
+    name = "Strengthening external rotation"
+
+
+class StrengtheningInternalRotation(Activity):
+    """
+    Stand and tie elastic on the side of the injured arm at elbow level. Hold
+    the end of elastic and bend your elbow to 90 degrees. Tuck your chin in and
+    pull the tip of your shoulder backwards while you pull the elastic towards
+    your belly. Keep your elbow bent and against your body and your chin tucked
+    in at all times. Slowly return to initial position and repeat.
+
+    Recommended: 15 rep 2 sets
+    Equipment: Band
+    """
+    name = "Strengthening internal rotation"
 
 
 class Warmup(Activity):

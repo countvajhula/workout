@@ -19,6 +19,7 @@ from routines import (
     PHYSIO_BACK_AND_NECK,
     PHYSIO_BALANCE,
     PHYSIO_CUSTOM,
+    PHYSIO_SHOULDER,
     PHYSIO_COMBINED,
     STRETCHES,
 )
