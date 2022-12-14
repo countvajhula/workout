@@ -256,15 +256,16 @@ PHYSIO_CUSTOM = (
 )
 
 PHYSIO_SHOULDER = (
-    ThoracicExtension(0.1),
-    ExternalRotationWithBand(0.1),
-    RowWithTheraband(0.1),
+    DoorwayPecStretch(1.0),
+    ThoracicExtension(1.0),
+    ExternalRotationWithBand(1.0),
+    RowWithTheraband(1.0),
 
     Rest(0.3),
 
-    ScapularRetraction(0.1),
-    StrengtheningExternalRotation(0.1),
-    StrengtheningInternalRotation(0.1),
+    ScapularRetraction(1.0),
+    StrengtheningExternalRotation(1.0),
+    StrengtheningInternalRotation(1.0),
 
     Rest(0.3),
 )
