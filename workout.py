@@ -26,10 +26,7 @@ from routines import (
 
 from constants import (WINDOWS, MAC_OS)
 
-try:  # py3
-    import configparser
-except ImportError:  # py2
-    import ConfigParser as configparser
+import configparser
 
 SET_DURATION = 30  # duration of each set in seconds
 
