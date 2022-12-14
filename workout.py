@@ -90,10 +90,10 @@ class Workout(object):
         total_duration = preferences.get('total_duration')
         self.routine = globals().get(self.routine_name)
         if total_duration:
-            self.set_duration = float(total_duration) / len(self.routine)
-            self.total_duration = total_duration
+            self.total_duration = int(total_duration)
+            self.set_duration = self.total_duration / len(self.routine)
         else:
-            self.set_duration = preferences.get('set_duration', SET_DURATION)
+            self.set_duration = int(preferences.get('set_duration', SET_DURATION))
             self.total_duration = len(self.routine) * self.set_duration
 
     def begin(self):
