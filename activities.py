@@ -7,6 +7,7 @@ Exercise descriptions from:
     Men's Journal (https://www.mensjournal.com/)
     BodyBuilding.com (https://www.bodybuilding.com)
     Popsugar Fitness (https://www.popsugar.com/fitness)
+    Active Method Physical Therapy (https://www.activemethodpt.com/),
 """
 
 
@@ -733,6 +734,45 @@ class StrengtheningInternalRotation(Activity):
     Equipment: Band
     """
     name = "Strengthening internal rotation"
+
+
+class BandPullApartPalmsUp(Activity):
+    """
+    Stand straight with your arms extended in front of you at shoulder height
+    and hold a band in both hands, palms up. Pull your arms apart to the
+    sides. Return to the center and repeat the exercise, keeping your palms up
+    at all times.
+
+    Recommended: 10 rep 3 sets
+    Equipment: Band
+    """
+    name = "Band pull apart palms up"
+
+
+class RowWithRotation(Activity):
+    """
+    Stand and tie elastic in front of you at shoulder level. Hold the end of
+    the band, bend your elbow to 90 degrees and lift your arm out to the side
+    to 90 degrees. Pull the tip of your shoulder backwards while you rotate
+    your forearm upwards keeping your elbow bent. Slowly return to initial
+    position and repeat.
+
+    Recommended: 10 rep 3 sets
+    Equipment: Band
+    """
+    name = "Row with rotation"
+
+
+class WallSlideWithFeetInFront(Activity):
+    """
+    Stand with your back flat against the wall, feet in front. Try to keep your
+    hips/shoulders/head/elbows on the wall as you slide your arms up and down
+    slowly. Keep the lower back against the wall.
+
+    Recommended: 10 rep 2 sets
+    Equipment: Band
+    """
+    name = "Wall slide with feet in front"
 
 
 class Warmup(Activity):
