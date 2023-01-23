@@ -61,6 +61,9 @@ from activities import (
     BandPullApartPalmsUp,
     RowWithRotation,
     WallSlideWithFeetInFront,
+    ShoulderFlexionAbduction,
+    ActiveShoulderProtraction,
+    ScapularProtraction,
     Warmup,
     Rest,
 )
@@ -275,6 +278,12 @@ PHYSIO_SHOULDER = (
     BandPullApartPalmsUp(1.0),
     RowWithRotation(1.0),
     WallSlideWithFeetInFront(1.0),
+
+    Rest(0.3),
+
+    ShoulderFlexionAbduction(1.0),
+    ActiveShoulderProtraction(1.0),
+    ScapularProtraction(1.0),
 )
 
 PHYSIO_COMBINED = (

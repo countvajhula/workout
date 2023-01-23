@@ -775,6 +775,42 @@ class WallSlideWithFeetInFront(Activity):
     name = "Wall slide with feet in front"
 
 
+class ShoulderFlexionAbduction(Activity):
+    """
+    Stand up straight with an elastic strap beneath your foot and hold the ends
+    of it in the opposite hand. With your palm facing the floor and your elbow
+    straight, lift and turn your hand up and across your body in a diagonal
+    motion so as to end up with your upper arm next to your ear. Lower your
+    hand slowly back down to its original position.
+
+    Recommended: 10 rep 2 sets
+    Equipment: Band
+    """
+    name = "Shoulder flexion or abduction"
+
+
+class ActiveShoulderProtraction(Activity):
+    """
+    Lie on your back with your knees bent and your back in neutral position
+    (slightly arched). Engage your core by recruiting your pelvic floor and
+    transverse abdominis. Maintain a steady abbdominal breathing while you
+    raise one arm to 90 degrees. Once your arm is vertical, raise your shoulder
+    blade off the floor and reach up to the ceiling, keeping your back flat on
+    the floor. Return slowly to the initial position and repeat with the other
+    arm.
+    """
+    name = "Active shoulder protraction"
+
+
+class ScapularProtraction(Activity):
+    """
+    Stand facing a table and put your hands on the edge of the table with your
+    elbows straight. Slowly lower into a push up. Step feet in to come back up
+    to standing position.
+    """
+    name = "Active shoulder protraction"
+
+
 class Warmup(Activity):
     name = "Warm up"
 
