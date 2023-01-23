@@ -763,7 +763,7 @@ class RowWithRotation(Activity):
     name = "Row with rotation"
 
 
-class WallSlideWithFeetInFront(Activity):
+class ShoulderStabilizationAbduction(Activity):
     """
     Stand with your back flat against the wall, feet in front. Try to keep your
     hips/shoulders/head/elbows on the wall as you slide your arms up and down
@@ -809,6 +809,32 @@ class ScapularProtraction(Activity):
     to standing position.
     """
     name = "Active shoulder protraction"
+
+
+class ChinTuck(Activity):
+    """
+    Sit up straight in a chair and look directly ahead of you. Tuck your chin
+    in without tilting your head down. Return your head to the original
+    position.
+
+    Recommended: 10 rep 2 sets
+    """
+    name = "Chin tuck"
+
+
+class SnowAngels(Activity):
+    """
+    Lay on your back with your arms at your sides, your knees bent, and your
+    feet flat on the floor. Tighten your abdominal muscles, and pull your
+    shoulder blades toward each other and push the back of your hands down into
+    the floor gently. Without letting your shoulders roll forward, slowly slide
+    your arms on the floor to raise them overhead as high as possible, with the
+    good posture and without pain. Do not let your shoulders shrug toward your
+    ear.
+
+    Recommended: 2 minutes
+    """
+    name = "Snow angels"
 
 
 class Warmup(Activity):

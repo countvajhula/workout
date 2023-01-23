@@ -64,6 +64,8 @@ from activities import (
     ShoulderFlexionAbduction,
     ActiveShoulderProtraction,
     ScapularProtraction,
+    ChinTuck,
+    SnowAngels,
     Warmup,
     Rest,
 )
@@ -284,6 +286,11 @@ PHYSIO_SHOULDER = (
     ShoulderFlexionAbduction(1.0),
     ActiveShoulderProtraction(1.0),
     ScapularProtraction(1.0),
+
+    Rest(0.3),
+
+    ChinTuck(1.0),
+    SnowAngels(1.0),
 )
 
 PHYSIO_COMBINED = (
