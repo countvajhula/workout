@@ -66,6 +66,16 @@ from activities import (
     ScapularProtraction,
     ChinTuck,
     SnowAngels,
+    StretchingSideBending,
+    KneelingLatPullDownWithBand,
+    LatPullDownWithBand,
+    AnkleDorsiflexionWithBand,
+    DorsiflexionWithBand,
+    EversionWithBand,
+    ResistedEversion,
+    HamstringAndCalfStretch,
+    LongSittingGastrocStretch,
+    Bookends,
     Warmup,
     Rest,
 )
@@ -322,6 +332,45 @@ PHYSIO_COMBINED = (
     BirdDogs(1.5),
     SegmentalThoracicFoamRoll(2.0),
     SLSWobbleCushion(2.0),
+)
+
+PHYSIO_NECK = (
+
+    Warmup(0.5),
+
+    StretchingSideBending(1),
+    ChinTuck(1.0),
+    SupineNods(1),
+    Bookends(1),
+
+    Rest(0.3),
+
+    ExternalRotationWithBand(1.0),
+    BandPullApartPalmsUp(1.0),
+    RowWithTheraband(1.0),
+
+    Rest(0.3),
+
+    KneelingLatPullDownWithBand(1),
+    LatPullDownWithBand(1),
+)
+
+PHYSIO_ANKLE = (
+
+    Warmup(0.5),
+
+    HamstringAndCalfStretch(1),
+    LongSittingGastrocStretch(1),
+
+    Rest(0.3),
+
+    AnkleDorsiflexionWithBand(1),
+    DorsiflexionWithBand(1),
+
+    Rest(0.3),
+
+    EversionWithBand(1),
+    ResistedEversion(1),
 )
 
 STRETCHES = (

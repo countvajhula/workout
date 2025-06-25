@@ -21,6 +21,8 @@ from routines import (
     PHYSIO_CUSTOM,
     PHYSIO_SHOULDER,
     PHYSIO_COMBINED,
+    PHYSIO_NECK,
+    PHYSIO_ANKLE,
     STRETCHES,
 )
 

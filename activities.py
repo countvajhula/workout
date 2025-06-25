@@ -8,6 +8,7 @@ Exercise descriptions from:
     BodyBuilding.com (https://www.bodybuilding.com)
     Popsugar Fitness (https://www.popsugar.com/fitness)
     Active Method Physical Therapy (https://www.activemethodpt.com/),
+    Corpo Kinetic (https://www.youtube.com/watch?v=rjXQ3IbbtNs),
 """
 
 
@@ -835,6 +836,129 @@ class SnowAngels(Activity):
     Recommended: 2 minutes
     """
     name = "Snow angels"
+
+
+class StretchingSideBending(Activity):
+    """
+    Sit straight. Tilt your head gently down towards your shoulder
+    until a stretch is felt on the side of the neck. Maintain the position
+    and relax
+
+    NOTE: Do not turn your head or tilt it forward or backwards while you
+    perform this stretch.
+
+    Recommended: 2 sets hold 30 seconds
+    """
+    name = "Stretching Side Bending"
+
+
+class KneelingLatPullDownWithBand(Activity):
+    """
+    Sit in front of a door with your buttocks on your heels.
+
+    First, secure a band over the door, raise your arm and hold the band
+    above your head. Then, lower the shoulder blade. Finally, pull the
+    elbow towards the ground, keeping your wrist over your elbow.
+    Slowly return to the starting position, elevating the shoulder
+    blade.
+
+    Recommended: 2 sets 10 reps hold 3 seconds
+    """
+    name = "Kneeling lat pulldown with band"
+
+
+class LatPullDownWithBand(Activity):
+    """
+    Sit in a chair and place the central knot of your band in a door
+    opposite to you, as high as possible. Hold the remaining ends of
+    the band in each hand. Drawing your shoulder blades toward the
+    ground, pull down and out on the band.
+
+    Recommended: 2 sets 10 reps hold 3 seconds
+    """
+    name = "lat pulldown with band"
+
+
+class AnkleDorsiflexionWithBand(Activity):
+    """
+    Sit with both legs straight and the band around the involved foot.
+    Hold the band in your hand and anchor it around the opposite foot
+    then slowly pull the involved foot toward your face. Return to the
+    starting position and repeat.
+
+    Recommended: 3 sets 10 reps w black band
+    """
+    name = "ankle dorsiflexion with band"
+
+
+class DorsiflexionWithBand(Activity):
+    """
+    Sit down on the floor with the involved leg crossed over the
+    uninvolved leg. With a band around the tip of your foot, pull your
+    toes toward your shin to dorsiflex your ankle against the
+    resistance of the band.
+
+    Recommended: 3 sets 10 reps w black band
+    """
+    name = "dorsiflexion with band"
+
+
+class EversionWithBand(Activity):
+    """
+    Sit in a chair with an elastic tied around your foot and against a
+    stable object. Keep your knee still and your heel in contact with
+    the floor while you move the sole of your foot towards the
+    outside. Return in control and repeat.
+
+    Recommended: 2 sets 10 reps hold 3 seconds
+    """
+    name = "eversion with band"
+
+
+class ResistedEversion(Activity):
+    """
+    Wrap a band around the affected foot just below the toes and use
+    the other foot as an lever while you hold the band in your hands.
+    Start with the sole of the foot facing inward then bring the foot
+    up and out so the sole is facing outside. Repeat.
+
+    Recommended: 2 sets 10 reps hold 3 seconds
+    """
+    name = "Resisted eversion"
+
+
+class HamstringAndCalfStretch(Activity):
+    """
+    Lie on your back and place a long strap around your forefoot,
+    holding the ends with your hands. Lift your leg straight up,
+    keeping your knee straight, and pulling gently on the strap with
+    your hands until you feel a gentle stretch behind the thigh and
+    calf. Maintain the position for the prescribed time.
+    """
+    name = "Hamstring and calf stretch"
+
+
+class LongSittingGastrocStretch(Activity):
+    """
+    Sit down with one leg outstretched and the other bent. Place a
+    strap around the ball of your outstretched foot and hold the ends
+    of the strap in your hands. Pull up against the strap until you
+    feel a stretch at the back of your leg. Relax. Repeat the above
+    with your knee slightly bent.
+    """
+    name = "long sitting gastroc stretch"
+
+
+class Bookends(Activity):
+    """
+    Set Up: lie on your side, hips and shoulders stacked, bottom elbow
+    bent to support the head, top arm reaching forward . INHALE reach
+    the top arm to the ceiling, and back behind you, allowing your
+    spine to rotate. Look at your hand the whole time. Go as far as
+    you can keeping your hips stacked and knees together. EXHALE reach
+    the arm to the ceiling, and forward again.
+    """
+    name = "bookends"
 
 
 class Warmup(Activity):
