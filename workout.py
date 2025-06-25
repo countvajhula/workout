@@ -128,7 +128,7 @@ class Workout(object):
         # and so that e.g. taunts are not unaccounted for, time wise
         say('Next: {exercise}.'.format(exercise=exercise.name))
         if self.coaching and exercise.__doc__:
-            description = re.sub('[^a-zA-Z0-9 \.]', ' ', exercise.__doc__)
+            description = re.sub(r'[^a-zA-Z0-9 \.]', ' ', exercise.__doc__)
             say(description)
         time.sleep(2)
         say('3... 2... 1... GO! {exercise}'.format(exercise=exercise.name))
