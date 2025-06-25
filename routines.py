@@ -60,7 +60,7 @@ from activities import (
     StrengtheningInternalRotation,
     BandPullApartPalmsUp,
     RowWithRotation,
-    WallSlideWithFeetInFront,
+    ShoulderStabilizationAbduction,
     ShoulderFlexionAbduction,
     ActiveShoulderProtraction,
     ScapularProtraction,
@@ -279,7 +279,7 @@ PHYSIO_SHOULDER = (
 
     BandPullApartPalmsUp(1.0),
     RowWithRotation(1.0),
-    WallSlideWithFeetInFront(1.0),
+    ShoulderStabilizationAbduction(1.0),
 
     Rest(0.3),
 
