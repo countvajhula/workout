@@ -6,7 +6,7 @@ import platform
 import re
 import time
 from datetime import datetime
-from random import choice
+from random import choice, random
 
 from routines import (
     ABS,
@@ -37,6 +37,7 @@ CONFIG_FILENAME = 'config.ini'
 CONFIG_ROOT = os.getenv("WORKOUT_ROOT", os.path.expanduser("~/.my_workout"))
 CONFIG_FILE = os.path.join(CONFIG_ROOT, CONFIG_FILENAME)
 
+CALLOUT_PROBABILITY = 0.2
 
 def say_mac_os(text):
     os.system("say -v Fiona {}".format(text))
@@ -135,22 +136,31 @@ class Workout(object):
         time.sleep(2)
         say('3... 2... 1... GO! {exercise}'.format(exercise=exercise.name))
         time.sleep(duration/2.0)
-        call_out = choice((False, False, True))
-        call_out = False
-        if call_out:
-            whom = choice(('Sid', 'Ariana'))
-            exercise_singular = exercise.name.rstrip('Ss')
-            taunt1 = ('Come on {whom}! You call that a {exercise_singular}?'
-                      .format(whom=whom, exercise_singular=exercise_singular))
-            taunt2 = ('My grandma does better {exercise} than you two!'
-                      .format(exercise=exercise.name))
-            taunt = choice((taunt1, taunt2))
-            say(taunt)
+        self.maybe_call_someone_out(exercise)
         interval = max(0, duration/2.0 - 3)
         time.sleep(interval)
         say('3... 2... 1...')
         time.sleep(1)
         return datetime.now()
+
+    def maybe_call_someone_out(self, exercise):
+        consider = random()
+        call_out = consider > (1 - CALLOUT_PROBABILITY)
+        if call_out:
+            whom = choice(self.users)
+            exercise_singular = exercise.name.rstrip('Ss')
+            if len(self.users) == 1:
+                who_collective = "you"
+            elif len(self.users) == 2:
+                who_collective = "you two"
+            else:
+                who_collective = "you lot"
+            taunt1 = ('Come on {whom}! You call that a {exercise_singular}?'
+                    .format(whom=whom, exercise_singular=exercise_singular))
+            taunt2 = ('My grandma does better {exercise} than {who_collective}!'
+                    .format(exercise=exercise.name, who_collective=who_collective))
+            taunt = choice((taunt1, taunt2))
+            say(taunt)
 
 
 # TODO: make a CLI for non-persistent config like workout type and coaching
